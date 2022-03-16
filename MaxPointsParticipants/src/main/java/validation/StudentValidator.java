@@ -3,7 +3,7 @@ import domain.Student;
 
 public class StudentValidator implements Validator<Student> {
     public void validate(Student student) throws ValidationException {
-        if (student.getID() == null || student.getID().equals("")) {
+        if (student.getID() == null || student.getID().equals("") || Integer.parseInt(student.getID()) <= 0) {
             throw new ValidationException("ID invalid! \n");
         }
         if (student.getNume() == null || student.getNume().equals("")) {
