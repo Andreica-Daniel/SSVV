@@ -3,7 +3,7 @@ import domain.Tema;
 
 public class TemaValidator implements Validator<Tema> {
     public void validate(Tema tema) throws ValidationException {
-        if (tema.getID() == null || tema.getID().equals("")) {
+        if (tema.getID() == null || tema.getID().equals("") || Integer.parseInt(tema.getID()) < 0 ) {
             throw new ValidationException("ID invalid! \n");
         }
         if (tema.getDescriere() == null || tema.getDescriere().equals("")) {

@@ -95,17 +95,17 @@ public class AssignmentsTest {
             try {
                 new Tema(arg1.toString(),
                         "desc",
-                        arg1,
                         this.assignmentStreamStartdate_Enddate.get("true")
-                                .get(arg1)
+                                .get(arg1),
+                        arg1
                 );
                 Validator<Tema> temaValidator = new TemaValidator();
                 temaValidator.validate(
                         new Tema(arg1.toString(),
                                 "desc",
-                                arg1,
                                 this.assignmentStreamStartdate_Enddate.get("true")
-                                        .get(arg1)
+                                        .get(arg1),
+                                arg1
                         )
                 );
             } catch (Exception exception) {
