@@ -73,17 +73,17 @@ public class AssignmentsTest {
             try {
                 new Tema(arg1.toString(),
                         "desc",
-                        this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get(),
                         this.assignmentStreamStartdate_Enddate.get("true")
-                                .get(this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get())
+                                .get(this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get()),
+                        this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get()
                 );
                 Validator<Tema> temaValidator = new TemaValidator();
                 temaValidator.validate(
                         new Tema(arg1.toString(),
                                 "desc",
-                                this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get(),
                                 this.assignmentStreamStartdate_Enddate.get("true")
-                                        .get(this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get())
+                                        .get(this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get()),
+                                this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get()
                         )
                 );
             } catch (Exception exception) {
