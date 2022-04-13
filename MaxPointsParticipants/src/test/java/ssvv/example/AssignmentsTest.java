@@ -185,8 +185,8 @@ public class AssignmentsTest {
         Tema assignment = new Tema(
                 this.assignmentStreamId.get("true").get(0).toString(),
                 "asdf",
-                this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get(),
-                this.assignmentStreamStartdate_Enddate.get("true").get(this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get())
+                this.assignmentStreamStartdate_Enddate.get("true").get(this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get()),
+                this.assignmentStreamStartdate_Enddate.get("true").keySet().stream().findFirst().get()
         );
         assignmentXMLRepository.save(assignment);
         assertTrue(assignmentXMLRepository.findOne(assignment.getID()).getID().equals(assignment.getID()));
