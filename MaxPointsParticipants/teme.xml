@@ -5,4 +5,9 @@
         <Deadline>11</Deadline>
         <Startline>10</Startline>
     </tema>
+    <tema ID="123">
+        <Descriere>Abcd</Descriere>
+        <Deadline>5</Deadline>
+        <Startline>3</Startline>
+    </tema>
 </Entitati>

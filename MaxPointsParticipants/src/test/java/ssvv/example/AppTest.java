@@ -1,15 +1,15 @@
 package ssvv.example;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import domain.Nota;
 import domain.Pair;
 import domain.Student;
 import domain.Tema;
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.TestInstance;
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.runner.RunWith;
 import repository.NotaXMLRepository;
-import repository.StudentFileRepository;
 import repository.StudentXMLRepository;
 import repository.TemaXMLRepository;
 import service.Service;
@@ -19,25 +19,61 @@ import validation.TemaValidator;
 import validation.Validator;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.function.Predicate;
 
-/**
- * Unit test for simple App.
- */
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
+@RunWith(JUnitPlatform.class)
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+    public HashMap<String, Predicate<Integer>> int_predicates;
+
+    @BeforeAll
+    public void setUpPredicates() {
+
+        // question: how to have predicates with multiple args? Maybe Function.interface instead.
+        // region predicates
+        Predicate<Integer> _1 = (arg1) -> {
+            try {
+                new Student(arg1.toString(), "a", 500);
+                Validator<Student> studentValidator = new StudentValidator();
+                studentValidator.validate(new Student(arg1.toString(), "a", 500));
+            } catch(Exception exception)  {
+                return false;
+            }
+
+            return true;
+        };
+
+        Predicate<Integer> _2 = (arg1) -> {
+            try {
+                new Student("13", "a", arg1);
+                Validator<Student> studentValidator = new StudentValidator();
+                studentValidator.validate(new Student("13", "a", arg1));
+            } catch(Exception exception)  {
+                return false;
+            }
+            return true;
+        };
+        // endregion
+        int_predicates.put("constructor_student_id", _1);
+        int_predicates.put("constructor_student_group", _2);
+    }
+
+
+    // priority 2
     @Test
     public void shouldAnswerWithTrue()
     {
         String filename = "./studenti.xml";
         Validator<Student> validator = new StudentValidator();
         StudentXMLRepository studentXMLRepository = new StudentXMLRepository(validator, filename);
-
     }
 
+    // priority 3
     @Test
     public void testAddStudent()
     {
@@ -49,7 +85,7 @@ public class AppTest
         Validator<Nota> validatorNota = new NotaValidator();
         Validator<Tema> validatorTema = new TemaValidator();
         StudentXMLRepository studentXMLRepository = new StudentXMLRepository(validatorStudent, studentFileName);
-        NotaXMLRepository notaXMLRepository = new NotaXMLRepository(validatorNota, notaFileName); // a problem if file does not exist. todo: add checks
+        NotaXMLRepository notaXMLRepository = new NotaXMLRepository(validatorNota, notaFileName);
         TemaXMLRepository temaXMLRepository = new TemaXMLRepository(validatorTema, temaFileName);
 
         Service service = new Service(studentXMLRepository, temaXMLRepository, notaXMLRepository);
@@ -70,14 +106,15 @@ public class AppTest
         }
     }
 
+
     // todo: pre and post conditions: assert add + delete is effective before running the rest
     // todo: move in other test class (new TC)
     // todo: create fixtures.
     // equivalence class: tests constructor() of Student.class
     @Test
-    public void ec1() {
+    public void test_student_constructor() {
 
-        // todo: elevate to fixture.
+        //
         ArrayList<Integer> invalidStreamStudentId = new ArrayList<>();
         ArrayList<Integer> validStreamStudentId = new ArrayList<>();
 
@@ -87,41 +124,16 @@ public class AppTest
         invalidStreamStudentGroup.add(1);
         validStreamStudentGroup.add(511);
 
-
         invalidStreamStudentId.add(-1); // add values to test
         invalidStreamStudentId.add(0);
         validStreamStudentId.add(1);
 
-        Predicate<Integer> testStudentConstructorPredicate1 = (arg1) -> {
-            try {
-                new Student(arg1.toString(), "a", 500);
-                Validator<Student> studentValidator = new StudentValidator();
-                studentValidator.validate(new Student(arg1.toString(), "a", 500));
-            } catch(Exception exception)  {
-                return false;
-            }
-
-            return true;
-        };
-
-        // todo: merge args? optional args? specify? (refactor)
-        Predicate<Integer> testStudentConstructorPredicate2 = (arg1) -> {
-            try {
-                new Student("13", "a", arg1);
-                Validator<Student> studentValidator = new StudentValidator();
-                studentValidator.validate(new Student("13", "a", arg1));
-            } catch(Exception exception)  {
-                return false;
-            }
-            return true;
-        };
-
         invalidStreamStudentId.forEach((Integer e) -> {
-            assertFalse(testStudentConstructorPredicate1.test(e));
+            assertFalse(this.int_predicates.get("constructor_student_id").test(e));
         });
 
         validStreamStudentId.forEach((Integer e) -> {
-            assertTrue(testStudentConstructorPredicate1.test(e));
+            assertTrue(this.int_predicates.get("constructor_student_group").test(e));
         });
 
     }
@@ -139,5 +151,4 @@ public class AppTest
     public void tc_3() {
 
     }
-
 }
