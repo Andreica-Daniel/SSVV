@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Test ec2." />
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)&#10;(Including project)">
+      <change afterPath="$PROJECT_DIR$/mockFile1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mockFile2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mockFile3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/console/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/console/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +23,7 @@
         <entry key="$PROJECT_DIR$/.." value="test_Septimiu" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
@@ -38,7 +45,9 @@
     </option>
   </component>
   <component name="ProjectId" id="25mZuOt9lRH9jUYyz7wqyhw8KpF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
@@ -47,6 +56,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -61,7 +71,7 @@
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StudentTest.test_ec1_addStudent_Stream_Group_Valid">
+  <component name="RunManager" selected="JUnit.AssignmentsTest.WhiteBoxTest1">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -71,8 +81,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AssignmentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MaxPointsParticipants" />
+    <configuration name="AssignmentsTest.WhiteBoxTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ssvv.example.*" />
@@ -81,7 +91,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="WhiteBoxTest1" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,8 +113,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentTest.test_ec1_addStudent_Stream_Id_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MaxPointsParticipants" />
+    <configuration name="StudentTest.test_ec1_addStudent_Stream_Id_Valid (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ssvv.example.*" />
@@ -152,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1" />
+        <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Id_Valid (1)" />
         <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Group_Valid" />
         <item itemvalue="JUnit.StudentTest.test_ec2_addStudent_Stream_Group_Fail" />
         <item itemvalue="JUnit.StudentTest.test_ec2_addStudent_Stream_Id_Fail" />
-        <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Id_Valid" />
-        <item itemvalue="JUnit.AssignmentsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +191,7 @@
       <workItem from="1649840787865" duration="1617000" />
       <workItem from="1649842643630" duration="117000" />
       <workItem from="1650184510447" duration="5046000" />
+      <workItem from="1650191758520" duration="3541000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -244,7 +256,28 @@
       <option name="project" value="LOCAL" />
       <updated>1650189542063</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fix relative paths to avoid modifying Jenkins path behavior.">
+      <created>1650191835621</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650191835621</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)">
+      <created>1650191891282</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1650191891282</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)&#10;(Including project)">
+      <created>1650191965593</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1650191965593</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +322,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Tests file." />
     <MESSAGE value="Testing skeleton. &#10;Validator updated. #bugfix &#10;BVA. EC.&#10;Various problems." />
     <MESSAGE value="Init new branch." />
@@ -298,25 +332,44 @@
     <MESSAGE value="Separating functional tests into equivalence classes for the addStudent test case.&#10;&#10;This way the Jenkins will be capable of running jobs." />
     <MESSAGE value="Made valid ec_1 test use the XmlRepo `fixture`." />
     <MESSAGE value="Test ec2." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test ec2." />
+    <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior." />
+    <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)" />
+    <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)" />
+    <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)&#10;(Including project)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)&#10;(Including project)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>150</line>
+          <line>200</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>95</line>
+          <line>145</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>111</line>
+          <line>161</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/console/UI.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/console/UI.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/service/Service.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

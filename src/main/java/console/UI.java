@@ -71,11 +71,11 @@ public class UI {
         }
     }
 
-    public void uiSaveTema() {
-        Scanner scanner = new Scanner(System.in);
+    public void uiSaveTema(Scanner scanner) {
+        //Scanner scanner = new Scanner(System.in);
 
         System.out.println("Introduceti ID-ul temei: ");
-        String id = scanner.nextLine();
+        String id = scanner.nextLine().trim();
 
         System.out.println("Introduceti o descriere a temei: ");
         String descriere = scanner.nextLine();
@@ -216,7 +216,7 @@ public class UI {
                     uiSaveStudent();
                     break;
                 case 22:
-                    uiSaveTema();
+                    uiSaveTema(scanner);
                     break;
                 case 23:
                     uiSaveNota();

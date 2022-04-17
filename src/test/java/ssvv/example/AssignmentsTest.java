@@ -1,16 +1,20 @@
 package ssvv.example;
 
+import console.UI;
 import domain.Tema;
 import org.junit.jupiter.api.*;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
+import repository.NotaXMLRepository;
+import repository.StudentXMLRepository;
 import repository.TemaXMLRepository;
+import service.Service;
+import validation.NotaValidator;
+import validation.StudentValidator;
 import validation.TemaValidator;
 import validation.Validator;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -52,6 +56,52 @@ public class AssignmentsTest {
 
     private void setUpGeneratedFileNames() {
         this.generatedFileNames.put("testAssignmentRepository", new ArrayList<>(Arrays.asList("./testCaseAssignments.xml")));
+    }
+
+    @Test
+    public void WhiteBoxTest1() throws IOException, Exception {
+        byte[] i1 = "22 1\nasdf\n12\n6\n0\n".getBytes();
+        InputStream in = new ByteArrayInputStream(i1);
+
+        FileWriter newFile = new FileWriter("./mockFile1.txt");
+        newFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile.flush();
+        newFile.close();
+
+        FileWriter newFile2 = new FileWriter("./mockFile2.txt");
+        newFile2.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile2.flush();
+        newFile2.close();
+
+        FileWriter newFile3 = new FileWriter("./mockFile3.txt");
+        newFile3.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile3.flush();
+        newFile3.close();
+
+        StudentValidator sv = new StudentValidator();
+        StudentXMLRepository sr = new StudentXMLRepository(sv, "./mockFile1.txt");
+
+        TemaValidator tv = new TemaValidator();
+        TemaXMLRepository tr = new TemaXMLRepository(tv, "./mockFile2.txt");
+
+        NotaValidator nv = new NotaValidator();
+        NotaXMLRepository nr = new NotaXMLRepository(nv, "./mockFile3.txt");
+
+        Service service = new Service(sr, tr, nr);
+        UI ui = new UI(service);
+        System.setIn(in);
+        ui.run();
+
+        if (!tr.findAll().iterator().hasNext()) {
+            Assertions.assertTrue(false);
+        }
+
+        File fd1 = new File("./mockFile1.txt");
+        fd1.delete();
+        File fd2 = new File("./mockFile2.txt");
+        fd2.delete();
+        File fd3 = new File("./mockFile3.txt");
+        fd3.delete();
     }
 
     private void setUpAssignmentsStream() {
