@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Test ec2." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="test_Septimiu" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/console/UI.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/ssvv/example/App.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/validation/StudentValidator.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/validation/TemaValidator.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/target/classes/ssvv/example/App.class" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/target/test-classes/ssvv/example/AppTest.class" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="25mZuOt9lRH9jUYyz7wqyhw8KpF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\src\test\java\ssvv\example" />
+      <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.StudentTest.test_ec1_addStudent_Stream_Group_Valid">
+    <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="14" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.App" />
+      <module name="MaxPointsParticipants" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssignmentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointsParticipants" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest.test_ec1_addStudent_Stream_Group_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointsParticipants" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.StudentTest" />
+      <option name="METHOD_NAME" value="test_ec1_addStudent_Stream_Group_Valid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest.test_ec1_addStudent_Stream_Id_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointsParticipants" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.StudentTest" />
+      <option name="METHOD_NAME" value="test_ec1_addStudent_Stream_Id_Valid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest.test_ec2_addStudent_Stream_Group_Fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointsParticipants" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.StudentTest" />
+      <option name="METHOD_NAME" value="test_ec2_addStudent_Stream_Group_Fail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StudentTest.test_ec2_addStudent_Stream_Id_Fail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MaxPointsParticipants" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.StudentTest" />
+      <option name="METHOD_NAME" value="test_ec2_addStudent_Stream_Id_Fail" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Group_Valid" />
+        <item itemvalue="JUnit.StudentTest.test_ec2_addStudent_Stream_Group_Fail" />
+        <item itemvalue="JUnit.StudentTest.test_ec2_addStudent_Stream_Id_Fail" />
+        <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Id_Valid" />
+        <item itemvalue="JUnit.AssignmentsTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="" />
+      <created>1646134459188</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646134459188</updated>
+      <workItem from="1646134471261" duration="466000" />
+      <workItem from="1646135065632" duration="2035000" />
+      <workItem from="1646217608205" duration="68000" />
+      <workItem from="1646582813461" duration="159000" />
+      <workItem from="1647416873583" duration="1114000" />
+      <workItem from="1648284519720" duration="99000" />
+      <workItem from="1648284664946" duration="855000" />
+      <workItem from="1648290136073" duration="33000" />
+      <workItem from="1648305088556" duration="600000" />
+      <workItem from="1649840787865" duration="1617000" />
+      <workItem from="1649842643630" duration="117000" />
+      <workItem from="1650184510447" duration="5046000" />
+    </task>
+    <task id="LOCAL-00001" summary="Tests file.">
+      <created>1646582916340</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646582916340</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Testing skeleton. &#10;Validator updated. #bugfix &#10;BVA. EC.&#10;Various problems.">
+      <created>1647417850482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1647417850482</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init new branch.">
+      <created>1649841792641</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1649841792641</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix faulty constructor.">
+      <created>1649841912769</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1649841912769</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix first test.">
+      <created>1649842248027</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1649842248027</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix assignment test.">
+      <created>1649842329840</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1649842329840</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Separating functional tests into equivalence classes for the addStudent test case.&#10;&#10;This way the Jenkins will be capable of running jobs.">
+      <created>1650188684101</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1650188684101</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made valid ec_1 test use the XmlRepo `fixture`.">
+      <created>1650189262813</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1650189262813</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Test ec2.">
+      <created>1650189542063</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1650189542063</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="HEAD" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tests file." />
+    <MESSAGE value="Testing skeleton. &#10;Validator updated. #bugfix &#10;BVA. EC.&#10;Various problems." />
+    <MESSAGE value="Init new branch." />
+    <MESSAGE value="Fix faulty constructor." />
+    <MESSAGE value="Fix first test." />
+    <MESSAGE value="Fix assignment test." />
+    <MESSAGE value="Separating functional tests into equivalence classes for the addStudent test case.&#10;&#10;This way the Jenkins will be capable of running jobs." />
+    <MESSAGE value="Made valid ec_1 test use the XmlRepo `fixture`." />
+    <MESSAGE value="Test ec2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test ec2." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
+          <line>95</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
