@@ -30,6 +30,8 @@ public class StudentTest {
     public HashMap<String, ArrayList<String>> generatedFileNames;
     public HashMap<String, Predicate<Integer>> int_predicates;
 
+    public StudentXMLRepository currentXmlRepo;
+
     @BeforeAll
     public void initializeArrays() {
         this.studentStreamId = new HashMap<>();
@@ -50,6 +52,34 @@ public class StudentTest {
         this.setUpGeneratedFileNames();
     }
 
+    @BeforeEach
+    public void SetUpXmlRepo() throws IOException, Exception {
+        String filename = this.generatedFileNames.get("testStudentRepository").get(0);
+        FileWriter newFile = new FileWriter("./testCaseStudents.xml");
+        newFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile.flush();
+        newFile.close();
+
+        try {
+            Validator<Student> validator = new StudentValidator();
+            StudentXMLRepository studentXMLRepository = new StudentXMLRepository(validator, filename);
+            this.currentXmlRepo = studentXMLRepository;
+        } catch (Exception e) {
+            File myFD = new File(filename);
+            myFD.delete();
+            throw new Exception(e);
+        }
+
+        assertTrue(true);
+    }
+
+    @AfterEach
+    public void CleanUpXmlRepo() throws IOException, Exception {
+        String filename = this.generatedFileNames.get("testStudentRepository").get(0);
+        File myFD = new File(filename);
+        myFD.delete();
+    }
+
     private void setUpGeneratedFileNames() {
         this.generatedFileNames.put("testStudentRepository", new ArrayList<>(Arrays.asList("./testCaseStudents.xml")));
     }
@@ -61,8 +91,6 @@ public class StudentTest {
     }
 
     private void setUpPredicates() {
-        // question: how to have predicates with multiple args? Maybe Function.interface instead.
-        // region predicates
         Predicate<Integer> _1 = (arg1) -> {
             try {
                 new Student(arg1.toString(), "a", 500);
@@ -126,26 +154,26 @@ public class StudentTest {
         this.studentStreamId.get("true").forEach( (Integer id) -> {
             try {
                 Assertions.assertTrue(this.int_predicates.get("constructor_student_id").test(id));
+                Student testStudent = new Student(id.toString(), "a", 500);
+                this.currentXmlRepo.save(testStudent);
             } catch (Exception e) {
                 Assertions.fail();
             }
         });
-
         Assertions.assertTrue(true);
     }
 
     @Test
     public void test_ec2_addStudent_Stream_Id_Fail() {
+        // should fail before adding, so the XMLRepo is not used.
         this.studentStreamId.get("false").forEach( (Integer id) -> {
             try {
                 Assertions.assertFalse(this.int_predicates.get("constructor_student_id").test(id));
             } catch (Exception e) {
-                // even though a boolean signals the success, this pattern can check for exceptions as well
                 // also see assertThrows().
                 Assertions.assertTrue(true);
             }
         });
-
         Assertions.assertTrue(true);
     }
 
@@ -189,8 +217,6 @@ public class StudentTest {
         newFile.flush();
         newFile.close();
 
-        // catch blocks are revert blocks
-        // todo: refactor into forEach and use Function.interface
         try {
             this.testAddingAndRemoving(filename);
         } catch (Exception e) {
@@ -207,8 +233,7 @@ public class StudentTest {
             throw new Exception(e);
         }
 
-        assertTrue(true);
-        // No need to cleanup at this final point because @AfterAll will handle cleanup automatically.
+        assertTrue(true); // No need to cleanup at this final point because @AfterAll will handle cleanup automatically.
     }
 
     @AfterAll
