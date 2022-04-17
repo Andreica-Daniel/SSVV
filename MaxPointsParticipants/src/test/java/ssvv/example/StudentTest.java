@@ -122,6 +122,34 @@ public class StudentTest {
     }
 
     @Test
+    public void test_ec1_addStudent_Stream_Id_Valid() {
+        this.studentStreamId.get("true").forEach( (Integer id) -> {
+            try {
+                Assertions.assertTrue(this.int_predicates.get("constructor_student_id").test(id));
+            } catch (Exception e) {
+                Assertions.fail();
+            }
+        });
+
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    public void test_ec2_addStudent_Stream_Id_Fail() {
+        this.studentStreamId.get("false").forEach( (Integer id) -> {
+            try {
+                Assertions.assertFalse(this.int_predicates.get("constructor_student_id").test(id));
+            } catch (Exception e) {
+                // even though a boolean signals the success, this pattern can check for exceptions as well
+                // also see assertThrows().
+                Assertions.assertTrue(true);
+            }
+        });
+
+        Assertions.assertTrue(true);
+    }
+
+    @Test
     @Order(1)
     public void testStudentConstructor() {
         predicatesStudentConstructorInteger("constructor_student_id", this.studentStreamId);
