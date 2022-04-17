@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="New WBT for HW3.">
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="WBT bugfixes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractCRUDRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractCRUDRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractXMLRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "coverage"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -68,12 +68,52 @@
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AssignmentsTest.WhiteBoxTest1_Valid">
+  <component name="RunManager" selected="JUnit.AssignmentsTest.AllWhiteBoxTestsCoverage">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.App" />
       <module name="MaxPointsParticipants" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AssignmentsTest.AllWhiteBoxTestsCoverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="console.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ssvv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="validation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
+      <option name="METHOD_NAME" value="AllWhiteBoxTestsCoverage" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -117,26 +157,34 @@
           <option name="PATTERN" value="ssvv.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
-      <option name="METHOD_NAME" value="WhiteBoxTest1_Valid" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StudentTest.test_ec1_addStudent_Stream_Group_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MaxPointsParticipants" />
-      <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="PATTERN" value="console.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="ssvv.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="validation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.StudentTest" />
-      <option name="METHOD_NAME" value="test_ec1_addStudent_Stream_Group_Valid" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
+      <option name="METHOD_NAME" value="WhiteBoxTest1_Valid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -160,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AssignmentsTest.AllWhiteBoxTestsCoverage" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1_Valid" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1_Fails" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1" />
         <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Id_Valid (1)" />
-        <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Group_Valid" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +236,8 @@
       <workItem from="1649840787865" duration="1617000" />
       <workItem from="1649842643630" duration="117000" />
       <workItem from="1650184510447" duration="5046000" />
-      <workItem from="1650191758520" duration="5694000" />
+      <workItem from="1650191758520" duration="6236000" />
+      <workItem from="1650206736119" duration="1181000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -281,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650198677620</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="WBT bugfixes.">
+      <created>1650200837174</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1650200837174</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -341,24 +397,25 @@
     <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)" />
     <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)&#10;(Including project)" />
     <MESSAGE value="New WBT for HW3." />
-    <option name="LAST_COMMIT_MESSAGE" value="New WBT for HW3." />
+    <MESSAGE value="WBT bugfixes." />
+    <option name="LAST_COMMIT_MESSAGE" value="WBT bugfixes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>214</line>
+          <line>267</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>159</line>
+          <line>212</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>175</line>
+          <line>228</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -388,5 +445,25 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SSVV$AssignmentsTest_AllWhiteBoxTestsCoverage.ic" NAME="AssignmentsTest.AllWhiteBoxTestsCoverage Coverage Results" MODIFIED="1650207745528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ssvv.example.*</FILTER>
+      <FILTER>console.*</FILTER>
+      <FILTER>domain.*</FILTER>
+      <FILTER>repository.*</FILTER>
+      <FILTER>service.*</FILTER>
+      <FILTER>ssvv.*</FILTER>
+      <FILTER>validation.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/SSVV$AssignmentsTest_WhiteBoxTest1_Valid.ic" NAME="AssignmentsTest.WhiteBoxTest1_Valid Coverage Results" MODIFIED="1650207336615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ssvv.example.*</FILTER>
+      <FILTER>console.*</FILTER>
+      <FILTER>domain.*</FILTER>
+      <FILTER>repository.*</FILTER>
+      <FILTER>service.*</FILTER>
+      <FILTER>ssvv.*</FILTER>
+      <FILTER>validation.*</FILTER>
+    </SUITE>
   </component>
 </project>

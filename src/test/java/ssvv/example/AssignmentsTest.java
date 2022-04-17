@@ -104,6 +104,59 @@ public class AssignmentsTest {
     }
 
     @Test
+    public void WhiteBoxTest2_Valid_AddAndUpdate() throws Exception {
+        byte[] i1 = String.format("22 1\nasdf\n12\n6\n22 1\nasdfg\n12\n6\n0\n").getBytes();
+        InputStream in = new ByteArrayInputStream(i1);
+
+        FileWriter newFile = new FileWriter("./mockFile1.txt");
+        newFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile.flush();
+        newFile.close();
+
+        FileWriter newFile2 = new FileWriter("./mockFile2.txt");
+        newFile2.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile2.flush();
+        newFile2.close();
+
+        FileWriter newFile3 = new FileWriter("./mockFile3.txt");
+        newFile3.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile3.flush();
+        newFile3.close();
+
+        StudentValidator sv = new StudentValidator();
+        StudentXMLRepository sr = new StudentXMLRepository(sv, "./mockFile1.txt");
+
+        TemaValidator tv = new TemaValidator();
+        TemaXMLRepository tr = new TemaXMLRepository(tv, "./mockFile2.txt");
+
+        NotaValidator nv = new NotaValidator();
+        NotaXMLRepository nr = new NotaXMLRepository(nv, "./mockFile3.txt");
+
+        Service service = new Service(sr, tr, nr);
+        UI ui = new UI(service);
+        System.setIn(in);
+        ui.run();
+
+        if (!tr.findAll().iterator().hasNext()) {
+            Assertions.fail();
+        }
+
+        File fd1 = new File("./mockFile1.txt");
+        fd1.delete();
+        File fd2 = new File("./mockFile2.txt");
+        fd2.delete();
+        File fd3 = new File("./mockFile3.txt");
+        fd3.delete();
+    }
+
+    @Test
+    public void AllWhiteBoxTestsCoverage() throws IOException, Exception {
+        this.WhiteBoxTest1_Fails();
+        this.WhiteBoxTest1_Valid();
+        this.WhiteBoxTest2_Valid_AddAndUpdate();
+    }
+
+    @Test
     public void WhiteBoxTest1_Valid() throws IOException, Exception {
         this.WhiteBoxTest("22", "1", "asdf", "12", "6");
     }
