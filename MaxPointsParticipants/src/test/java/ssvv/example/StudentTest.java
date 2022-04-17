@@ -154,7 +154,7 @@ public class StudentTest {
         this.studentStreamId.get("true").forEach( (Integer id) -> {
             try {
                 Assertions.assertTrue(this.int_predicates.get("constructor_student_id").test(id));
-                Student testStudent = new Student(id.toString(), "a", 500);
+                Student testStudent = new Student(id.toString(), "a", this.studentStreamGroup.get("true").get(0));
                 this.currentXmlRepo.save(testStudent);
             } catch (Exception e) {
                 Assertions.fail();
@@ -164,7 +164,7 @@ public class StudentTest {
     }
 
     @Test
-    public void test_ec2_addStudent_Stream_Id_Fail() {
+    public void test_ec1_addStudent_Stream_Id_Fail() {
         // should fail before adding, so the XMLRepo is not used.
         this.studentStreamId.get("false").forEach( (Integer id) -> {
             try {
@@ -172,6 +172,33 @@ public class StudentTest {
             } catch (Exception e) {
                 // also see assertThrows().
                 Assertions.assertTrue(true);
+            }
+        });
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    public void test_ec2_addStudent_Stream_Group_Fail() {
+        // should fail before adding, so the XMLRepo is not used.
+        this.studentStreamGroup.get("false").forEach( (Integer group) -> {
+            try {
+                Assertions.assertFalse(this.int_predicates.get("constructor_student_group").test(group));
+            } catch (Exception e) {
+                Assertions.assertTrue(true); // also see assertThrows().
+            }
+        });
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    public void test_ec1_addStudent_Stream_Group_Valid() {
+        this.studentStreamGroup.get("true").forEach( (Integer group) -> {
+            try {
+                Assertions.assertTrue(this.int_predicates.get("constructor_student_group").test(group));
+                Student testStudent = new Student(this.studentStreamId.get("true").get(0).toString(), "a", group);
+                this.currentXmlRepo.save(testStudent);
+            } catch (Exception e) {
+                Assertions.fail();
             }
         });
         Assertions.assertTrue(true);
