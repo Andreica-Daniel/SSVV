@@ -58,9 +58,8 @@ public class AssignmentsTest {
         this.generatedFileNames.put("testAssignmentRepository", new ArrayList<>(Arrays.asList("./testCaseAssignments.xml")));
     }
 
-    @Test
-    public void WhiteBoxTest1() throws IOException, Exception {
-        byte[] i1 = "22 1\nasdf\n12\n6\n0\n".getBytes();
+    private void WhiteBoxTest(String menuOption, String id, String description, String endWeek, String startWeek) throws Exception{
+        byte[] i1 = String.format("%s %s\n%s\n%s\n%s\n0\n", menuOption, id, description, endWeek, startWeek).getBytes();
         InputStream in = new ByteArrayInputStream(i1);
 
         FileWriter newFile = new FileWriter("./mockFile1.txt");
@@ -93,7 +92,7 @@ public class AssignmentsTest {
         ui.run();
 
         if (!tr.findAll().iterator().hasNext()) {
-            Assertions.assertTrue(false);
+            Assertions.fail();
         }
 
         File fd1 = new File("./mockFile1.txt");
@@ -102,6 +101,21 @@ public class AssignmentsTest {
         fd2.delete();
         File fd3 = new File("./mockFile3.txt");
         fd3.delete();
+    }
+
+    @Test
+    public void WhiteBoxTest1_Valid() throws IOException, Exception {
+        this.WhiteBoxTest("22", "1", "asdf", "12", "6");
+    }
+
+    @Test
+    public void WhiteBoxTest1_Fails() throws IOException, Exception {
+        try {
+            this.WhiteBoxTest("22", "-1", "asdf", "12", "6");
+            Assertions.fail();
+        } catch (Exception e) {
+            Assertions.assertTrue(true);
+        }
     }
 
     private void setUpAssignmentsStream() {
