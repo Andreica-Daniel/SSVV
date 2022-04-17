@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="WBT bugfixes.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/repository/AbstractXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/repository/AbstractXMLRepository.java" afterDir="false" />
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Added WBT for editing/updating an entry.">
       <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -237,7 +235,7 @@
       <workItem from="1649842643630" duration="117000" />
       <workItem from="1650184510447" duration="5046000" />
       <workItem from="1650191758520" duration="6236000" />
-      <workItem from="1650206736119" duration="1181000" />
+      <workItem from="1650206736119" duration="1292000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -337,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650200837174</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added WBT for editing/updating an entry.">
+      <created>1650207970656</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1650207970656</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,24 +403,25 @@
     <MESSAGE value="Fix relative paths to avoid modifying Jenkins path behavior.&#10;(Moving additional files)&#10;(Moving IDEA Workspace)&#10;(Including project)" />
     <MESSAGE value="New WBT for HW3." />
     <MESSAGE value="WBT bugfixes." />
-    <option name="LAST_COMMIT_MESSAGE" value="WBT bugfixes." />
+    <MESSAGE value="Added WBT for editing/updating an entry." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added WBT for editing/updating an entry." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>267</line>
+          <line>289</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>212</line>
+          <line>234</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>228</line>
+          <line>250</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -447,7 +453,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SSVV$AssignmentsTest_AllWhiteBoxTestsCoverage.ic" NAME="AssignmentsTest.AllWhiteBoxTestsCoverage Coverage Results" MODIFIED="1650207745528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SSVV$AssignmentsTest_AllWhiteBoxTestsCoverage.ic" NAME="AssignmentsTest.AllWhiteBoxTestsCoverage Coverage Results" MODIFIED="1650207937144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ssvv.example.*</FILTER>
       <FILTER>console.*</FILTER>
       <FILTER>domain.*</FILTER>

@@ -154,6 +154,9 @@ public class AssignmentsTest {
         this.WhiteBoxTest1_Fails();
         this.WhiteBoxTest1_Valid();
         this.WhiteBoxTest2_Valid_AddAndUpdate();
+        this.WhiteBoxTest2_Fails();
+        this.WhiteBoxTest3_Fails();
+        this.WhiteBoxTest4_Fails();
     }
 
     @Test
@@ -165,6 +168,36 @@ public class AssignmentsTest {
     public void WhiteBoxTest1_Fails() throws IOException, Exception {
         try {
             this.WhiteBoxTest("22", "-1", "asdf", "12", "6");
+            Assertions.fail();
+        } catch (Exception e) {
+            Assertions.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void WhiteBoxTest2_Fails() throws IOException, Exception {
+        try {
+            this.WhiteBoxTest("22", "1", "", "12", "6");
+            Assertions.fail();
+        } catch (Exception e) {
+            Assertions.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void WhiteBoxTest3_Fails() throws IOException, Exception {
+        try {
+            this.WhiteBoxTest("22", "1", "asdf", "12", "16");
+            Assertions.fail();
+        } catch (Exception e) {
+            Assertions.assertTrue(true);
+        }
+    }
+
+    @Test
+    public void WhiteBoxTest4_Fails() throws IOException, Exception {
+        try {
+            this.WhiteBoxTest("22", "1", "asdf", "14", "-1");
             Assertions.fail();
         } catch (Exception e) {
             Assertions.assertTrue(true);
