@@ -2,13 +2,18 @@ package ssvv.example;
 
 import domain.Nota;
 import domain.Pair;
+import domain.Student;
 import org.junit.jupiter.api.*;
 import org.junit.platform.runner.JUnitPlatform;
 import org.junit.runner.RunWith;
 import repository.NotaXMLRepository;
+import repository.StudentXMLRepository;
 import validation.NotaValidator;
+import validation.StudentValidator;
 import validation.Validator;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 import java.util.function.Predicate;
@@ -25,7 +30,8 @@ public class GradeTest {
     public Map<String, ArrayList<Integer>> gradesStreamPredata;
     public Map<String, ArrayList<Integer>> gradesStreamStudentID;
     public List<Nota> notaStream;
-    //public Map<String, ArrayList<String>> generatedFileNames;
+    public Map<String, ArrayList<String>> generatedFileNames;
+    public NotaXMLRepository currentXmlRepo;
 
     @BeforeAll
     public void initializeArrays() {
@@ -35,7 +41,7 @@ public class GradeTest {
         this.notaStream = new ArrayList<>();
         this.gradesStreamPredata = new HashMap<>();
         this.gradesStreamStudentID = new HashMap<>();
-        //this.generatedFileNames = new HashMap<>();
+        this.generatedFileNames = new HashMap<>();
 
 
         Arrays.asList("true", "false").forEach(e -> {
@@ -45,12 +51,43 @@ public class GradeTest {
             this.gradesStreamStudentID.put(e, new ArrayList<>());
         });
 
+
+        this.generatedFileNames.put("testGradeRepository", new ArrayList<>(Arrays.asList("./testCaseGrades.xml")));
+
         this.setUpPredicates();
         this.setUpEquivalenceClassAssignment();
         this.setUpGradesStream();
-        this.setUpGeneratedFileNames();
+        //this.setUpGeneratedFileNames();
     }
 
+    @BeforeEach
+    public void SetUpXmlRepo() throws IOException, Exception {
+        String filename = this.generatedFileNames.get("testGradeRepository").get(0);
+        FileWriter newFile = new FileWriter("./testCaseGrades.xml");
+        newFile.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>\n<Entitati>\n</Entitati>\n");
+        newFile.flush();
+        newFile.close();
+
+        try {
+            Validator<Nota> validator = new NotaValidator();
+            NotaXMLRepository notaXMLRepository = new NotaXMLRepository(validator, filename);
+            this.currentXmlRepo = notaXMLRepository;
+        } catch (Exception e) {
+            File myFD = new File(filename);
+            myFD.delete();
+            throw new Exception(e);
+        }
+
+        assertTrue(true);
+    }
+
+
+    @AfterEach
+    public void CleanUpXmlRepo() throws IOException, Exception {
+        String filename = this.generatedFileNames.get("testGradeRepository").get(0);
+        File myFD = new File(filename);
+        myFD.delete();
+    }
     private void setUpGeneratedFileNames() {
         //this.generatedFileNames.put("testAssignmentRepository", new ArrayList<>(Arrays.asList("./testCaseAssignments.xml")));
     }
@@ -158,6 +195,26 @@ public class GradeTest {
                     .get("true")
                     .add(e);
         });
+    }
+//            this.grades_predicates.put("sapt_predata", _1);
+//        this.grades_predicates.put("grade_value", _2);
+
+    @Test
+    public void test_ec1_addGrade_Stream_Id_Valid() {
+        this.gradesStreamId.get("true").forEach( (Integer grade) -> {
+           try {
+               Assertions.assertTrue(this.grades_predicates.get("sapt_predata").test(grade));
+               Nota testNota = new Nota(new Pair<>(this.gradesStreamStudentID.get("true").get(0).toString(), this.gradesStreamId.get("true").get(0).toString()),
+                        grade,
+                        this.gradesStreamPredata.get("true").get(0),
+                       "feedback"
+                       );
+               this.currentXmlRepo.save(testNota);
+           } catch (Exception e) {
+               Assertions.fail();
+           }
+        });
+        Assertions.assertTrue(true);
     }
 
     private void predicatesAssignmentConstructorInteger(String predicates_key, Map<String, ArrayList<Integer>> sampleStream) {

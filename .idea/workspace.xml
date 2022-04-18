@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Added WBT for editing/updating an entry.">
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java" afterDir="false" />
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Bug: adding a student with an existing ID just updates the old one.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,24 +50,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "coverage"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;coverage&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\src\test\java\ssvv\example" />
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AssignmentsTest.AllWhiteBoxTestsCoverage">
+  <component name="RunManager" selected="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Valid">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -188,7 +189,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentTest.test_ec1_addStudent_Stream_Id_Valid (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GradeTest.test_ec1_addGrade_Stream_Id_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSVV" />
       <extension name="coverage">
         <pattern>
@@ -197,8 +198,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.StudentTest" />
-      <option name="METHOD_NAME" value="test_ec1_addStudent_Stream_Id_Valid" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.GradeTest" />
+      <option name="METHOD_NAME" value="test_ec1_addGrade_Stream_Id_Valid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -206,11 +207,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Valid" />
         <item itemvalue="JUnit.AssignmentsTest.AllWhiteBoxTestsCoverage" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1_Valid" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1_Fails" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1" />
-        <item itemvalue="JUnit.StudentTest.test_ec1_addStudent_Stream_Id_Valid (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -235,7 +236,8 @@
       <workItem from="1649842643630" duration="117000" />
       <workItem from="1650184510447" duration="5046000" />
       <workItem from="1650191758520" duration="6236000" />
-      <workItem from="1650206736119" duration="1292000" />
+      <workItem from="1650206736119" duration="6416000" />
+      <workItem from="1650255494089" duration="645000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -342,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650207970656</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Bug: adding a student with an existing ID just updates the old one.">
+      <created>1650208415386</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1650208415386</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,24 +413,25 @@
     <MESSAGE value="New WBT for HW3." />
     <MESSAGE value="WBT bugfixes." />
     <MESSAGE value="Added WBT for editing/updating an entry." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added WBT for editing/updating an entry." />
+    <MESSAGE value="Bug: adding a student with an existing ID just updates the old one." />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug: adding a student with an existing ID just updates the old one." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>289</line>
+          <line>300</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>234</line>
+          <line>245</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/AssignmentsTest.java</url>
-          <line>250</line>
+          <line>261</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -453,7 +463,7 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/SSVV$AssignmentsTest_AllWhiteBoxTestsCoverage.ic" NAME="AssignmentsTest.AllWhiteBoxTestsCoverage Coverage Results" MODIFIED="1650207937144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/SSVV$AssignmentsTest_AllWhiteBoxTestsCoverage.ic" NAME="AssignmentsTest.AllWhiteBoxTestsCoverage Coverage Results" MODIFIED="1650208158840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ssvv.example.*</FILTER>
       <FILTER>console.*</FILTER>
       <FILTER>domain.*</FILTER>
