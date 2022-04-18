@@ -4,14 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Fix tests.">
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Test for out of bounds values.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/IntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -67,52 +74,12 @@
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Fails">
+  <component name="RunManager" selected="JUnit.IntegrationTest.test_all">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.App" />
       <module name="MaxPointsParticipants" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssignmentsTest.AllWhiteBoxTestsCoverage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSVV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="console.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="domain.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="ssvv.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="validation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
-      <option name="METHOD_NAME" value="AllWhiteBoxTestsCoverage" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -181,13 +148,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IntegrationTest.test_all" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.IntegrationTest" />
+      <option name="METHOD_NAME" value="test_all" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest.test_all" />
         <item itemvalue="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Fails" />
         <item itemvalue="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Fails" />
         <item itemvalue="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Valid" />
         <item itemvalue="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Valid" />
-        <item itemvalue="JUnit.AssignmentsTest.AllWhiteBoxTestsCoverage" />
       </list>
     </recent_temporary>
   </component>
@@ -213,7 +196,7 @@
       <workItem from="1650184510447" duration="5046000" />
       <workItem from="1650191758520" duration="6236000" />
       <workItem from="1650206736119" duration="6416000" />
-      <workItem from="1650255494089" duration="1119000" />
+      <workItem from="1650255494089" duration="1495000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -341,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650256548547</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Test for out of bounds values.">
+      <created>1650256662455</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1650256662455</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,7 +396,8 @@
     <MESSAGE value="Bug: adding a student with an existing ID just updates the old one." />
     <MESSAGE value="Added GradeTest." />
     <MESSAGE value="Fix tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix tests." />
+    <MESSAGE value="Test for out of bounds values." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for out of bounds values." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
