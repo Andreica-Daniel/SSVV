@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Test for out of bounds values.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/IntegrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Integration test attempt 1." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,7 +71,7 @@
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTest.test_all">
+  <component name="RunManager" selected="JUnit.IntegrationTest.test_1">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -95,22 +92,6 @@
       <option name="PACKAGE_NAME" value="ssvv.example" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.GradeTest" />
       <option name="METHOD_NAME" value="test_ec1_addGrade_Stream_Id_Fails" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GradeTest.test_ec1_addGrade_Stream_Id_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSVV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.GradeTest" />
-      <option name="METHOD_NAME" value="test_ec1_addGrade_Stream_Id_Valid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,6 +129,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IntegrationTest.test_1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.IntegrationTest" />
+      <option name="METHOD_NAME" value="test_1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="IntegrationTest.test_all" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SSVV" />
       <extension name="coverage">
@@ -166,11 +163,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTest.test_1" />
         <item itemvalue="JUnit.IntegrationTest.test_all" />
         <item itemvalue="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Fails" />
         <item itemvalue="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Fails" />
         <item itemvalue="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Valid" />
-        <item itemvalue="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Valid" />
       </list>
     </recent_temporary>
   </component>
@@ -196,7 +193,7 @@
       <workItem from="1650184510447" duration="5046000" />
       <workItem from="1650191758520" duration="6236000" />
       <workItem from="1650206736119" duration="6416000" />
-      <workItem from="1650255494089" duration="1495000" />
+      <workItem from="1650255494089" duration="2020000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -331,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650256662455</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Integration test attempt 1.">
+      <created>1650257261086</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1650257261086</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,7 +401,8 @@
     <MESSAGE value="Added GradeTest." />
     <MESSAGE value="Fix tests." />
     <MESSAGE value="Test for out of bounds values." />
-    <option name="LAST_COMMIT_MESSAGE" value="Test for out of bounds values." />
+    <MESSAGE value="Integration test attempt 1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Integration test attempt 1." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -436,6 +441,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/validation/TemaValidator.java</url>
           <line>5</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java</url>
+          <line>206</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
