@@ -155,8 +155,8 @@ public class GradeTest {
             return true;
         };
 
-        this.grades_predicates.put("sapt_predata", _1);
-        this.grades_predicates.put("grade_value", _2);
+        this.grades_predicates.put("grade_value", _1);
+        this.grades_predicates.put("sapt_predata", _2);
     }
 
     private void setUpEquivalenceClassAssignment() {
@@ -201,9 +201,9 @@ public class GradeTest {
 
     @Test
     public void test_ec1_addGrade_Stream_Id_Valid() {
-        this.gradesStreamId.get("true").forEach( (Integer grade) -> {
+        this.gradesStreamValues.get("true").forEach( (Integer grade) -> {
            try {
-               Assertions.assertTrue(this.grades_predicates.get("sapt_predata").test(grade));
+               Assertions.assertTrue(this.grades_predicates.get("grade_value").test(grade));
                Nota testNota = new Nota(new Pair<>(this.gradesStreamStudentID.get("true").get(0).toString(), this.gradesStreamId.get("true").get(0).toString()),
                         grade,
                         this.gradesStreamPredata.get("true").get(0),
@@ -213,6 +213,24 @@ public class GradeTest {
            } catch (Exception e) {
                Assertions.fail();
            }
+        });
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    public void test_ec2_addGrade_Stream_Id_Valid() {
+        this.gradesStreamPredata.get("true").forEach( (Integer week) -> {
+            try {
+                Assertions.assertTrue(this.grades_predicates.get("sapt_predata").test(week));
+                Nota testNota = new Nota(new Pair<>(this.gradesStreamStudentID.get("true").get(0).toString(), this.gradesStreamId.get("true").get(0).toString()),
+                        this.gradesStreamValues.get("true").get(0),
+                        week,
+                        "feedback"
+                );
+                this.currentXmlRepo.save(testNota);
+            } catch (Exception e) {
+                Assertions.fail();
+            }
         });
         Assertions.assertTrue(true);
     }

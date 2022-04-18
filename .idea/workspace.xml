@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Bug: adding a student with an existing ID just updates the old one.">
+    <list default="true" id="428af602-43a7-4499-975a-35b0a1d0fe39" name="Changes" comment="Added GradeTest.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/GradeTest.java" afterDir="false" />
     </list>
@@ -67,7 +67,7 @@
       <recent name="C:\Users\Septimiu\Documents\SSVV_Clone\c1\SSVV\MaxPointsParticipants\target\test-classes\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Valid">
+  <component name="RunManager" selected="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Valid">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="14" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -112,22 +112,6 @@
       <option name="PACKAGE_NAME" value="ssvv.example" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
       <option name="METHOD_NAME" value="AllWhiteBoxTestsCoverage" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AssignmentsTest.WhiteBoxTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSVV" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.AssignmentsTest" />
-      <option name="METHOD_NAME" value="WhiteBoxTest1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -205,13 +189,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GradeTest.test_ec2_addGrade_Stream_Id_Valid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.GradeTest" />
+      <option name="METHOD_NAME" value="test_ec2_addGrade_Stream_Id_Valid" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GradeTest.test_ec2_addGrade_Stream_Id_Valid" />
         <item itemvalue="JUnit.GradeTest.test_ec1_addGrade_Stream_Id_Valid" />
         <item itemvalue="JUnit.AssignmentsTest.AllWhiteBoxTestsCoverage" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1_Valid" />
         <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1_Fails" />
-        <item itemvalue="JUnit.AssignmentsTest.WhiteBoxTest1" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +237,7 @@
       <workItem from="1650184510447" duration="5046000" />
       <workItem from="1650191758520" duration="6236000" />
       <workItem from="1650206736119" duration="6416000" />
-      <workItem from="1650255494089" duration="645000" />
+      <workItem from="1650255494089" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="Tests file.">
       <created>1646582916340</created>
@@ -351,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650208415386</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added GradeTest.">
+      <created>1650256305890</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1650256305890</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,7 +421,8 @@
     <MESSAGE value="WBT bugfixes." />
     <MESSAGE value="Added WBT for editing/updating an entry." />
     <MESSAGE value="Bug: adding a student with an existing ID just updates the old one." />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug: adding a student with an existing ID just updates the old one." />
+    <MESSAGE value="Added GradeTest." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added GradeTest." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,11 +456,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/service/Service.java</url>
           <line>42</line>
           <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/repository/AbstractCRUDRepository.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/validation/TemaValidator.java</url>
