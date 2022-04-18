@@ -218,6 +218,25 @@ public class GradeTest {
     }
 
     @Test
+    public void test_ec1_addGrade_Stream_Id_Fails() {
+        this.gradesStreamValues.get("false").forEach( (Integer grade) -> {
+            try {
+                Assertions.assertFalse(this.grades_predicates.get("grade_value").test(grade));
+                Nota testNota = new Nota(new Pair<>(this.gradesStreamStudentID.get("true").get(0).toString(), this.gradesStreamId.get("true").get(0).toString()),
+                        grade,
+                        this.gradesStreamPredata.get("true").get(0),
+                        "feedback"
+                );
+                this.currentXmlRepo.save(testNota);
+                Assertions.fail();
+            } catch (Exception e) {
+                Assertions.assertTrue(true);
+            }
+        });
+        Assertions.assertTrue(true);
+    }
+
+    @Test
     public void test_ec2_addGrade_Stream_Id_Valid() {
         this.gradesStreamPredata.get("true").forEach( (Integer week) -> {
             try {
@@ -230,6 +249,25 @@ public class GradeTest {
                 this.currentXmlRepo.save(testNota);
             } catch (Exception e) {
                 Assertions.fail();
+            }
+        });
+        Assertions.assertTrue(true);
+    }
+
+    @Test
+    public void test_ec2_addGrade_Stream_Id_Fails() {
+        this.gradesStreamPredata.get("false").forEach( (Integer week) -> {
+            try {
+                Assertions.assertFalse(this.grades_predicates.get("sapt_predata").test(week));
+                Nota testNota = new Nota(new Pair<>(this.gradesStreamStudentID.get("true").get(0).toString(), this.gradesStreamId.get("true").get(0).toString()),
+                        this.gradesStreamValues.get("true").get(0),
+                        week,
+                        "feedback"
+                );
+                this.currentXmlRepo.save(testNota);
+                Assertions.fail();
+            } catch (Exception e) {
+                Assertions.assertTrue(true);
             }
         });
         Assertions.assertTrue(true);
